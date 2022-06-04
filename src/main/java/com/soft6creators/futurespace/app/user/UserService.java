@@ -131,7 +131,7 @@ public class UserService {
 				+ "          If you don't recognize this activity, please contact our customer\r\n"
 				+ "          support immediately.\r\n"
 				+ "        </p>\r\n"
-				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">FutureSpace Team</p>\r\n"
+				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">CryptoSpace Team</p>\r\n"
 				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">\r\n"
 				+ "          This is an automated message, Please do not reply\r\n"
 				+ "        </p>\r\n"
