@@ -463,20 +463,22 @@ function getAccount() {
             1
           );
           document.getElementById("paid-interest").textContent =
-            expectedAmount.toFixed(1);
-
-          investmentComplete();
+            expectedAmount.toFixed(2);
+          document.getElementById("interest-account").innerText = (expectedAmount + account.accountBalance).toFixed(1);
+			
+          investmentComplete(response.investmentId, expectedAmount);
         } else {
           let currentPercent = (100 * elapsedTime) / totalTime;
 
-          let accruedInterest = (expectedAmount * elapsedTime) / totalTime;
+		  
+          let accruedInterest = ((expectedAmount * elapsedTime) / totalTime).toFixed(2);
+          console.log(accruedInterest);
           document.getElementById(
             "payment-percent"
           ).style.width = `${currentPercent}%`;
 
           document.getElementById("accrued-interest").textContent =
-            accruedInterest.toFixed(1);
-            console.log(accruedInterest)
+            accruedInterest
           document.getElementById("paid-interest").textContent = (0).toFixed(1);
         }
       }
