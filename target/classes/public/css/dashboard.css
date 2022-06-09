@@ -6,6 +6,15 @@
   cursor: pointer;
 }
 
+.fade-out {
+	opacity: 0;
+	transition: 0.5s;
+}
+.fade-in {
+	opacity: 1;
+	transition: 0.5s;
+}
+
 .no-margin {
   margin: 0px;
 }
@@ -25,7 +34,7 @@ a {
   padding: 2%;
 }
 .padding-mkt {
-  padding: 1%;
+  padding: 6% 1% 0%;
 }
 
 .padding-3 {
