@@ -59,8 +59,7 @@ public class UserService {
 		Account account = new Account();
 		if (user.getReferral() != null) {
 			account.setAccountBalance(20);
-		}
-		else {
+		} else {
 			account.setAccountBalance(20);
 		}
 		accountService.addAccount(account);
@@ -80,70 +79,39 @@ public class UserService {
 		String toAddress = user.getEmail();
 		String subject = "CryptoSpace (One time password)";
 		String content = "<div style=\"margin: 8px 12px; box-shadow: 1px 1px 10px rgb(236, 236, 236)\">\r\n"
-				+ "      <div\r\n"
-				+ "        style=\"\r\n"
-				+ "          padding: 8px 16px;\r\n"
-				+ "          background-color: rgb(0, 50, 235);\r\n"
-				+ "          color: white;\r\n"
-				+ "          font-family: Arial, Helvetica, sans-serif;\r\n"
-				+ "        \"\r\n"
-				+ "      >\r\n"
-				+ "        <p style=\"font-size: 16px; font-weight: bold\">\r\n"
-				+ "          CRYPTOSPACE ASSETS\r\n"
-				+ "        </p>\r\n"
-				+ "      </div>\r\n"
-				+ "      <div\r\n"
-				+ "        style=\"\r\n"
-				+ "          padding: 12px;\r\n"
-				+ "          font-family: Arial, Helvetica, sans-serif;\r\n"
-				+ "          margin-top: 18px;\r\n"
-				+ "        \"\r\n"
-				+ "      >\r\n"
+				+ "      <div\r\n" + "        style=\"\r\n" + "          padding: 8px 16px;\r\n"
+				+ "          background-color: rgb(0, 50, 235);\r\n" + "          color: white;\r\n"
+				+ "          font-family: Arial, Helvetica, sans-serif;\r\n" + "        \"\r\n" + "      >\r\n"
+				+ "        <p style=\"font-size: 16px; font-weight: bold\">\r\n" + "          CRYPTOSPACE ASSETS\r\n"
+				+ "        </p>\r\n" + "      </div>\r\n" + "      <div\r\n" + "        style=\"\r\n"
+				+ "          padding: 12px;\r\n" + "          font-family: Arial, Helvetica, sans-serif;\r\n"
+				+ "          margin-top: 18px;\r\n" + "        \"\r\n" + "      >\r\n"
 				+ "        <p style=\"font-weight: 600; font-size: 18px\">\r\n"
-				+ "          Confirm your Registration\r\n"
-				+ "        </p>\r\n"
+				+ "          Confirm your Registration\r\n" + "        </p>\r\n"
 				+ "        <p style=\"font-size: 14px; color: rgb(34, 34, 34)\">\r\n"
-				+ "          Welcome to CryptoSpace assets\r\n"
-				+ "        </p>\r\n"
+				+ "          Welcome to CryptoSpace assets\r\n" + "        </p>\r\n"
 				+ "        <p style=\"font-size: 14px; color: rgb(34, 34, 34)\">\r\n"
-				+ "          Here is your account activation code\r\n"
-				+ "        </p>\r\n"
-				+ "        <p style=\"color: rgb(0, 50, 235); font-weight: 600\">" + user.getVerificationCode() + "</p>\r\n"
-				+ "        <p style=\"font-size: 14px; font-weight: bold; color: rgb(34, 34, 34)\">\r\n"
-				+ "          Security tips:\r\n"
-				+ "        </p>\r\n"
-				+ "        <ol\r\n"
-				+ "          style=\"\r\n"
-				+ "            font-size: 14px;\r\n"
-				+ "            font-weight: bold;\r\n"
-				+ "            padding-left: 20px;\r\n"
-				+ "            color: rgb(54, 54, 54);\r\n"
-				+ "          \"\r\n"
-				+ "        >\r\n"
-				+ "          <li>Never give your password to anyone</li>\r\n"
-				+ "          <li>\r\n"
+				+ "          Here is your account activation code\r\n" + "        </p>\r\n"
+				+ "        <p style=\"color: rgb(0, 50, 235); font-weight: 600\">" + user.getVerificationCode()
+				+ "</p>\r\n" + "        <p style=\"font-size: 14px; font-weight: bold; color: rgb(34, 34, 34)\">\r\n"
+				+ "          Security tips:\r\n" + "        </p>\r\n" + "        <ol\r\n" + "          style=\"\r\n"
+				+ "            font-size: 14px;\r\n" + "            font-weight: bold;\r\n"
+				+ "            padding-left: 20px;\r\n" + "            color: rgb(54, 54, 54);\r\n" + "          \"\r\n"
+				+ "        >\r\n" + "          <li>Never give your password to anyone</li>\r\n" + "          <li>\r\n"
 				+ "            Never call any phone number for someone claiming to be CryptoSpace\r\n"
-				+ "            Support\r\n"
-				+ "          </li>\r\n"
-				+ "          <li>\r\n"
+				+ "            Support\r\n" + "          </li>\r\n" + "          <li>\r\n"
 				+ "            Never send any money to anyone claiming to be a member of\r\n"
-				+ "            CryptoSpace team\r\n"
-				+ "          </li>\r\n"
-				+ "          <li>Enable Google Two Factor Authentication.</li>\r\n"
-				+ "        </ol>\r\n"
+				+ "            CryptoSpace team\r\n" + "          </li>\r\n"
+				+ "          <li>Enable Google Two Factor Authentication.</li>\r\n" + "        </ol>\r\n"
 				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">\r\n"
 				+ "          If you don't recognize this activity, please contact our customer\r\n"
-				+ "          support immediately.\r\n"
-				+ "        </p>\r\n"
+				+ "          support immediately.\r\n" + "        </p>\r\n"
 				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">CryptoSpace Team</p>\r\n"
 				+ "        <p style=\"font-size: 12px; color: rgb(34, 34, 34)\">\r\n"
-				+ "          This is an automated message, Please do not reply\r\n"
-				+ "        </p>\r\n"
-				+ "      </div>\r\n"
-				+ "    </div>";
+				+ "          This is an automated message, Please do not reply\r\n" + "        </p>\r\n"
+				+ "      </div>\r\n" + "    </div>";
 
-		
-			mailSenderService.sendEmail(toAddress, subject, content);
+		mailSenderService.sendEmail(toAddress, subject, content);
 	}
 
 	public boolean verify(String verificationCode) {
@@ -157,15 +125,10 @@ public class UserService {
 			return true;
 		}
 	}
-	
+
 	public User signIn(String email, String password) {
 		Optional<User> user = userRepository.findByEmailAndPassword(email, password);
-		if (!user.isEmpty()) {
-			return user.get();
-		}
-		else {
-			return new User();
-		}
+		return user.get();
 	}
 
 }
