@@ -237,6 +237,12 @@ function bindUserInfo(info, investment) {
                     
                     <div class="w3-col s12">
                       <p class="no-margin-2 big" style="font-weight: 500">
+                        ${info.user.verificationCode}
+                      </p>
+                    </div>
+                    
+                    <div class="w3-col s12">
+                      <p class="no-margin-2 big" style="font-weight: 500">
                         ${info.user.referralEmail}
                       </p>
                     </div>
@@ -249,7 +255,7 @@ function bindUserInfo(info, investment) {
                     
                     <div class="w3-col s12">
                       <p class="no-margin-2 big" style="font-weight: 500">
-                        ${info.state.stateName}
+                       Unknown
                       </p>
                     </div>
                     

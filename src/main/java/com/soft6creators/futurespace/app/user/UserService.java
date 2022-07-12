@@ -1,5 +1,6 @@
 package com.soft6creators.futurespace.app.user;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Optional;
 
 import javax.mail.MessagingException;
@@ -51,6 +52,9 @@ public class UserService {
 			sendVerificationEmail(user);
 		} catch (MessagingException e) {
 			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		Account account = new Account();
 		if (user.getReferral() != null) {
@@ -72,7 +76,7 @@ public class UserService {
 		return userRepository.existsById(email);
 	}
 
-	private void sendVerificationEmail(User user) throws MessagingException {
+	private void sendVerificationEmail(User user) throws MessagingException, UnsupportedEncodingException {
 		String toAddress = user.getEmail();
 		String subject = "CryptoSpace (One time password)";
 		String content = "<div style=\"margin: 8px 12px; box-shadow: 1px 1px 10px rgb(236, 236, 236)\">\r\n"
