@@ -18,14 +18,12 @@ public class MailSenderService {
 	private JavaMailSender mailSender;
 	
 	public void sendEmail(String toEmail, String subject, String body) throws MessagingException, UnsupportedEncodingException {
-		ClassPathResource image = new ClassPathResource("public/images/logocopy.png");
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
 		helper.setFrom("cryptospaceassets@gmail.com", "CRYPTOSPACE SUPPORT");
 		helper.setTo(toEmail);
 		helper.setSubject(subject);
 		helper.setText(body, true);
-		helper.addInline("image", image);
 		
 		mailSender.send(message);
 		System.out.println("Mail sent successfully");
