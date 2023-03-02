@@ -55,6 +55,6 @@ public class UserController {
 	
 	@RequestMapping(method = RequestMethod.PUT, value = "/user")
 	private User updateUser(@RequestBody User user) {
-		return userService.addUser(user);
+		return userService.updateUser(user);
 	}
 }
